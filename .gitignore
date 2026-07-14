@@ -1,4 +1,13 @@
 .env
+
 __pycache__/
+
 *.pyc
+
+output/
+
 backup/
+
+.venv/
+
+.vscode/
