@@ -14,6 +14,7 @@ from modules.question_generator import generate_questions
 from modules.faq_generator import generate_faq
 from modules.answer_generator import generate_answer_blocks
 from modules.post_processor import process_blog
+from modules.seo_analyzer import analyze_seo
 
 st.set_page_config(
     page_title=PROJECT_NAME
@@ -396,6 +397,32 @@ if st.session_state.blog:
     st.markdown(
         st.session_state.blog
     )
+
+if st.session_state.blog:
+
+    result = analyze_seo(
+
+        st.session_state.blog,
+
+        keyword
+
+    )
+
+    st.divider()
+
+    st.subheader("📈 SEO 분석")
+
+    st.metric(
+
+        "SEO 점수",
+
+        f"{result['score']}점"
+
+    )
+
+    for r in result["reasons"]:
+
+        st.write("✔", r)
 
 ## ==========================
 # 파일 저장

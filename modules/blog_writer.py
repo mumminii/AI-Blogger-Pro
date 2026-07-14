@@ -16,8 +16,10 @@ def generate_blog(
         faq
     )
 
-    result = generate_ai_text(
-        prompt
-    )
+    from modules.humanizer import humanize_blog
+
+    result = generate_ai_text(prompt)
+
+    result = humanize_blog(result)
 
     return result
