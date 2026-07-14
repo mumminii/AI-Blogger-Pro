@@ -76,3 +76,19 @@
 ### Next
 - V1.2 AI Provider Architecture
 - Free AI model integration
+
+# CHANGELOG
+
+## v1.5.0
+- Prompt Builder 리팩토링
+- BLOG_PLATFORM 지원
+- 네이버 전용 Prompt 분리
+
+## v1.4.0
+- Ollama 연동
+- Local AI Provider 추가
+- AI Pipeline 구축
+
+## v1.3.0
+- Gemini Provider
+- AI Engine 구조화
